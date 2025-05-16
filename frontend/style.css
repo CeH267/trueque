@@ -1,0 +1,357 @@
+/* Paleta de Colores de Le Corbusier (Vibrante) */
+:root {
+    --rojo-vibrante: #E2583E;
+    --azul-brillante: #0077B6;
+    --amarillo-alegre: #FFD166;
+    --verde-esperanza: #4CAF50;
+    --gris-neutro: #F0F0F0;
+    --blanco-puro: #FFFFFF;
+    --negro-principal: #333333;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--blanco-puro);
+    color: var(--negro-principal);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--rojo-vibrante);
+    color: var(--blanco-puro);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--blanco-puro);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--blanco-puro);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--amarillo-alegre);
+}
+
+/* Hero Carousel Section */
+.hero-carousel {
+    background-color: var(--gris-neutro);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.carousel-container h2 {
+    color: var(--azul-brillante);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto; /* Permite scroll si hay muchas imágenes */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Mejora el scroll en iOS */
+}
+
+.carousel-item {
+    flex: 0 0 300px; /* Ancho fijo para cada item, ajusta según necesites */
+    margin-right: 20px;
+    background-color: var(--blanco-puro);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+.carousel-item p {
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: var(--negro-principal);
+}
+
+/* Social Media Section */
+.social-media-section {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: var(--blanco-puro);
+}
+
+.social-media-section h2 {
+    color: var(--verde-esperanza);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    color: var(--blanco-puro);
+    text-align: center;
+    font-size: 1.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon i {
+    vertical-align: middle;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+.fa-facebook-f {
+    background-color: #3b5998;
+}
+
+.fa-twitter {
+    background-color: #1da1f2;
+}
+
+.fa-instagram {
+    background-color: #c13584;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+/* Legal Section */
+.legal-section {
+    padding: 4rem 0;
+    background-color: var(--gris-neutro);
+}
+
+.legal-section h2 {
+    color: var(--azul-brillante);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.legal-content {
+    background-color: var(--blanco-puro);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.legal-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: var(--negro-principal);
+}
+
+.legal-content strong {
+    color: var(--rojo-vibrante);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--negro-principal);
+    color: var(--gris-neutro);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footer-links a {
+    color: var(--gris-neutro);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--amarillo-alegre);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    .carousel-item {
+        flex: 0 0 250px; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .footer .container {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        margin-top: 1rem;
+    }
+
+    .footer-links a {
+        margin: 0 10px;
+    }
+}
+
+/* === Estilos específicos para la página de Venta === */
+
+/* Aplica Open Sans como fuente base para el contenido */
+body {
+    font-family: 'Open Sans', sans-serif; /* Usamos Open Sans como la fuente principal de contenido */
+    margin: 0;
+    padding: 0;
+    background-color: var(--blanco-puro);
+    color: var(--negro-principal);
+}
+
+/* Estilo para el título principal de la sección de venta */
+.venta-section h2 {
+    color: var(--rojo-vibrante); /* Usamos un color vibrante de Le Corbusier */
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Título principal con Montserrat */
+    font-weight: 700; /* Negrita para el título */
+}
+
+
+/* Estilos para la grilla de artículos */
+.items-grid {
+    display: grid;
+    /* Crea columnas que se auto-rellenan. Cada columna tendrá un ancho mínimo de 280px y máximo de 1fr (fracción del espacio disponible) */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px; /* Espacio entre los elementos de la grilla */
+    padding: 1rem 0;
+}
+
+/* Estilos para cada artículo individual en la grilla */
+.item {
+    background-color: var(--gris-neutro); /* Fondo suave para el artículo */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que la imagen redondeada no sobresalga */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex; /* Usa flexbox para organizar el contenido dentro del item */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave al pasar el mouse */
+}
+
+.item:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.item img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor del item */
+    height: 200px; /* Altura fija para la imagen (ajusta si es necesario) */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-bottom: 3px solid var(--azul-brillante); /* Línea de color de Le Corbusier debajo de la imagen */
+}
+
+.item h3 {
+    font-family: 'Montserrat', sans-serif; /* Títulos de artículo con Montserrat */
+    font-weight: 700; /* Negrita para los títulos */
+    font-size: 1.3rem;
+    color: var(--azul-brillante); /* Color de Le Corbusier para el título */
+    margin: 1rem 1rem 0.5rem 1rem; /* Margen interior */
+}
+
+.item p {
+    font-family: 'Open Sans', sans-serif; /* Descripciones con Open Sans */
+    font-size: 1rem;
+    color: var(--negro-principal); /* Color de texto principal */
+    padding: 0 1rem 1rem 1rem; /* Margen interior */
+    flex-grow: 1; /* Permite que la descripción ocupe el espacio restante */
+    line-height: 1.5;
+}
+
+.item .precio {
+    font-family: 'Montserrat', sans-serif; /* Precio con Montserrat */
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--verde-esperanza); /* Un color alegre para el precio */
+    padding: 0 1rem 1rem 1rem;
+    text-align: right; /* Alinea el precio a la derecha */
+}
+
+
+/* Ajustes responsivos para la página de venta */
+@media (max-width: 600px) {
+    .items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Unidades más pequeñas en móviles */
+    }
+
+    .venta-section h2 {
+        font-size: 2rem; /* Reduce el tamaño del título en móviles */
+    }
+
+    .item h3 {
+        font-size: 1.2rem;
+    }
+
+    .item p {
+        font-size: 0.95rem;
+    }
+}
